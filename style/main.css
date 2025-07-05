@@ -1,3 +1,45 @@
+/* Personalización del modal de SweetAlert2 para que combine con el diseño rosa pastel */
+.swal2-popup {
+  background: linear-gradient(120deg,
+    #ffe0ef 0%,
+    #ffd1e3 20%,
+    #fbc2eb 50%,
+    #ffb6d5 100%
+  );
+  border-radius: 24px !important;
+  box-shadow: 0 8px 32px 0 rgba(255, 105, 180, 0.25), 0 1.5px 8px 0 #ffb6d5;
+  color: #b8005c !important;
+  border: 2px solid #ffb6d5;
+}
+
+.swal2-title {
+  color: #ff3e8e !important;
+  font-family: 'Poppins', cursive, sans-serif;
+  font-weight: bold;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 8px #ffb6d5aa;
+}
+
+.swal2-confirm {
+  background: linear-gradient(90deg, #ff69b4 0%, #ffb6d5 100%) !important;
+  color: #fff !important;
+  border-radius: 8px !important;
+  font-weight: bold;
+  box-shadow: 0 2px 8px #ffb6d5aa;
+  border: none !important;
+}
+
+.swal2-cancel {
+  background: linear-gradient(90deg, #ffd1e3 0%, #fbc2eb 100%) !important;
+  color: #b8005c !important;
+  border-radius: 8px !important;
+  font-weight: bold;
+  border: none !important;
+}
+
+.swal2-styled:focus {
+  box-shadow: 0 0 0 2px #ffb6d5 !important;
+}
 html {
   box-sizing: border-box;
 }
@@ -5,6 +47,18 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
+  /* Fondo con gradiente de tonos pastel rosados */
+  background: linear-gradient(120deg,
+    #ffe0ef 0%,    /* rosa muy claro */
+    #ffd1e3 15%,   /* rosa pastel */
+    #fbc2eb 30%,   /* rosa lavanda pastel */
+    #f9a1c7 45%,   /* rosa chicle pastel */
+    #fcb7b7 60%,   /* rosa coral pastel */
+    #ffb6d5 75%,   /* rosa fuerte pastel */
+    #f7b2e6 90%,   /* rosa lila pastel */
+    #fbeffb 100%   /* blanco rosado */
+  );
+  min-height: 100vh;
 }
 
 .song {
@@ -106,14 +160,6 @@ body {
   height: 350px;
   max-width: 100%;
   /* height: auto; */
-}
-
-.six .hat {
-  left: 41.5%;
-  position: absolute;
-  /* transform: scale(0.1); */
-  top: -35%;
-  width: 80px;
 }
 
 .baloons img {

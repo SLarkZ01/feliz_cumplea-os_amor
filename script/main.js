@@ -21,6 +21,7 @@ window.addEventListener('load', () => {
 
 // animation timeline
 const animationTimeline = () => {
+
     // split chars that needs to be animated individually
     const textBoxChars = document.getElementsByClassName("hbd-chatbox")[0];
     const hbd = document.getElementsByClassName("wish-hbd")[0];
@@ -32,6 +33,9 @@ const animationTimeline = () => {
     hbd.innerHTML = `<span>${hbd.innerHTML
         .split("")
         .join("</span><span>")}</span>`;
+
+    // Referencia a la imagen de overlay de 19
+    const ageOverlay = document.querySelector('.age-overlay');
 
     const ideaTextTrans = {
         opacity: 0,
@@ -187,23 +191,36 @@ const animationTimeline = () => {
         },
         0.2
     )
+    // Mostrar la imagen 19.png encima de amor.png después de la animación de la foto
     .from(
         ".profile-picture",
-        0.5, {
-            scale: 3.5,
+        1.2, {
+            scale: 1.2,
             opacity: 0,
-            x: 25,
-            y: -25,
-            rotationZ: -45,
+            y: 60,
+            filter: "blur(12px)",
+            ease: "power3.out",
         },
         "-=2"
     )
-    .from(".hat", 0.5, {
-        x: -100,
-        y: 350,
-        rotation: -180,
-        opacity: 0,
-    })
+    .to(
+        ".profile-picture",
+        0.8, {
+            scale: 1,
+            y: 0,
+            filter: "blur(0px)",
+            ease: "power2.out"
+        },
+        "-=1.1"
+    )
+    .to(
+        ".age-overlay",
+        0.7,
+        {
+            opacity: 1
+        },
+        "+=0.2"
+    )
     .staggerFrom(
         ".wish-hbd span",
         0.7, {
@@ -268,5 +285,7 @@ const animationTimeline = () => {
     const replyBtn = document.getElementById("replay");
     replyBtn.addEventListener("click", () => {
         tl.restart();
+        // Ocultar la imagen 19.png al reiniciar
+        if (ageOverlay) ageOverlay.style.opacity = 0;
     });
 }
