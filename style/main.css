@@ -136,17 +136,50 @@ body {
   padding: 3px 5px;
 }
 
+
+
+
+
 .five .idea-5 {
   font-size: 4rem;
+  color: #fff;
+  background: linear-gradient(90deg, #ff69b4 0%, #ff3e8e 40%, #ff1493 70%, #ffb6d5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  text-shadow: 0 2px 16px #ff3e8eaa, 0 1px 6px #ff69b4cc;
+  letter-spacing: -0.03em;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 0.2em 0.5em;
+  transition: background 0.3s;
+}
+
+
+
+
+.idea-6 span {
+  font-size: 15rem;
+  color: #fff;
+  background: linear-gradient(90deg, #ff69b4 0%, #ff3e8e 50%, #ff1493 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  text-shadow: 0 2px 20px #ff3e8eaa, 0 1px 8px #ff69b4cc;
+  font-weight: bold;
+  border-radius: 16px;
+  padding: 0 0.1em;
+  margin: 0 0.05em;
+  transition: background 0.3s;
 }
 
 .idea-5 span, .idea-6 span, .wish-hbd span {
   display: inline-block;
 }
 
-.idea-6 span{
-  font-size: 15rem;
-}
+
 
 
 .six {
